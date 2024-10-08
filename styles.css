@@ -59,6 +59,7 @@ nav {
     /* Transparent so we see the hero background */
     text-align: center;
     z-index: 10;
+    padding-bottom: 2rem;
     /* Ensure nav stays above other elements */
 }
 
@@ -180,6 +181,10 @@ nav ul li {
     color: white;
     text-align: center;
     position: relative;
+}
+
+.hero div {
+    padding-top: 5rem;
 }
 
 /* Opaque Overlay */
