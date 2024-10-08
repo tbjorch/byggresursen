@@ -99,7 +99,9 @@
 
         // Add event listeners to navigation links
         const navLinks = document.querySelectorAll('nav ul li a');
-        navLinks.forEach(link => {
+        const heroCta = document.querySelectorAll('.hero div a');
+        const links = [...navLinks, ...heroCta];
+        links.forEach(link => {
             link.addEventListener('click', (event) => {
                 event.preventDefault();
                 const target = link.getAttribute('href');
