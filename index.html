@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>Exclusive Construction Co.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="assets/logo.png" />
+        </div>
+        <ul>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#about">Om oss</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h2>förverkliga dina idéer</h2>
+            <p class="hero-text">
+                På Byggresursen hjälper vi dig med renoveringar och nybyggnation i såväl ny som gammal stil. Vi vet att
+                detaljer och linjer är viktigt för att uppnå den där känslan av något extra.
+                För att uppnå detta arbetar vi med noggrannhet och kvalitet i varje steg av processen.
+            </p>
+            <a href="#contact">Kontakta oss</a>
+        </div>
+    </section>
+
+    <section id="selected-project">
+        <div class="project-container">
+            <div class="project-item project-item-margin">
+                <h1>Exklusiv nybyggnation</h1>
+                <p>
+                    Vi har lång erfarenhet av att bygga exklusiva hus från grunden, både med traditionella
+                    lösvirkesmetoder och moderna modulbaserade konstruktioner. Vårt fokus ligger på kvalitet och
+                    anpassning för att skapa
+                    hem som uppfyller dina unika behov och önskemål. På Byggresursen hjälper vi dig med renoveringar och
+                    nybyggnation i såväl
+                    ny som gammal stil. Vi vet att detaljer och linjer är viktigt för att uppnå den där känslan av något
+                    extra.
+                    För att uppnå detta arbetar vi med noggrannhet och kvalitet i varje steg av processen.
+                </p>
+                <img class="selected-project-image" src="assets/bathroom.png" alt="A bathroom">
+            </div>
+            <div class="project-item">
+                <div class="selected-project-image-container">
+                    <div class="project-item project-item-margin">
+                        <img class="selected-project-image" src="assets/kitchen.png" alt="A kitchen">
+                    </div>
+                    <div class="project-item project-item-margin">
+                        <img class="selected-project-image" src="assets/livingroom.png" alt="A livingroom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div>
+            <h1>Om Oss</h1>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="brighter-section">
+        <h1>Kontakt</h1>
+        <p><a href="tel:123-456-7890">(+46) 123-456-7890</a></p>
+        <p><a href="mailto:info@byggresursen.com">info@byggresursen.com</a></p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Byggreursen AB</p>
+    </footer>
+
+    <script>
+        // Smooth scroll function
+        function smoothScroll(target) {
+            const element = document.querySelector(target);
+            window.scrollTo({
+                top: element.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+
+        // Add event listeners to navigation links
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                const target = link.getAttribute('href');
+                smoothScroll(target);
+            });
+        });
+    </script>
+</body>
+
+</html>

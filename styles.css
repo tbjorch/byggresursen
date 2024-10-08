@@ -1,0 +1,311 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    background-color: #f4f4f4;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--secondary-accent-color);
+    font-weight: 300;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--secondary-accent-color);
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* Luxurious Color Palette */
+:root {
+    --main-color: #141414;
+    --secondary-color: #2a292e;
+    --accent-color: #ffffff;
+    --secondary-accent-color: rgba(200, 170, 100);
+    /* Gold */
+    --background-color: #ffffff;
+    --text-color: #ffffff;
+    /* White text */
+}
+
+/* Navigation */
+nav {
+    position: absolute;
+    /* Position the nav on top of the header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    /* Transparent so we see the hero background */
+    text-align: center;
+    z-index: 10;
+    /* Ensure nav stays above other elements */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 3rem 3rem 3rem;
+}
+
+.logo {
+    width: 400px;
+    max-width: 90%;
+}
+
+#selected-project {
+    background-color: var(--main-color);
+}
+
+.selected-project-image-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.selected-project-image {
+    width: inherit;
+    max-width: 100%;
+    border-radius: 0.24rem;
+}
+
+.project-container {
+    justify-content: space-evenly;
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project-item-margin {
+    margin-bottom: 1.5rem;
+}
+
+.project-item {
+    width: 550px;
+    max-width: 100%;
+}
+
+.project-item h1 {
+    margin-top: 0;
+}
+
+.project-item p {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+    nav h1 {
+        color: var(--text-color);
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 901px) {
+    nav h1 {
+        color: var(--text-color);
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+
+/* Hero Section */
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    /* background-image: url('assets/kitchen.png'); */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* Opaque Overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* Black overlay with opacity */
+}
+
+.hero h2,
+.hero p,
+.hero a {
+    position: relative;
+    z-index: 1;
+    font-weight: 200;
+    /* To be above the overlay */
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-top: 20px;
+    width: 60%;
+}
+
+/* Call to Action Button */
+.hero a {
+    background-color: white;
+    color: var(--main-color);
+    display: inline-block;
+    margin-top: 50px;
+    padding: 12px 24px;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
+
+.p {
+    font-size: 18px;
+    color: #ddd;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about {
+    background-image: url('assets/outdoor.png');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    position: relative;
+    text-align: center;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    /* Black overlay with opacity */
+}
+
+section {
+    padding: 4rem 2rem;
+    position: relative;
+    min-height: 90vh;
+}
+
+.brighter-section {
+    background-color: var(--secondary-color);
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    min-height: 90vh;
+}
+
+.brighter-section a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Hover Effects */
+nav ul li a:hover,
+.hero a:hover,
+.contact form button:hover {
+    background-color: transparent;
+    color: var(--secondary-accent-color);
+    transition: 0.5s ease;
+}
+
+p.hero-text {
+    color: white;
+    text-align: center;
+    margin: auto;
+    min-width: 350px;
+}
