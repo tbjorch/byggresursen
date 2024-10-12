@@ -7,19 +7,38 @@ html {
     font-weight: 200;
     font-style: normal;
     background-color: #f4f4f4;
-    color: white;
+    color: var(--accent-color);
 }
+
 
 @media (max-width: 600px) {
     html {
         font-size: 12px;
     }
+}
 
+@media (min-width: 601px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Luxurious Color Palette */
+:root {
+    --main-color: #141414;
+    --secondary-color: #2a292e;
+    --accent-color: #ffffffea;
+    --grey: #f4f4f418;
+    --secondary-accent-color: rgba(200, 170, 100);
+    /* Gold */
+    --background-color: #ffffff;
+    --text-color: #ffffff;
+    /* White text */
 }
 
 h1 {
     font-size: 3rem;
-    color: var(--secondary-accent-color);
+    color: var(--accent-color);
     font-weight: 300;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
@@ -28,24 +47,19 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    color: var(--secondary-accent-color);
+    font-weight: 300;
+    color: var(--accent-color);
     text-transform: uppercase;
 }
 
 p {
     font-size: 1.2rem;
-}
-
-/* Luxurious Color Palette */
-:root {
-    --main-color: #141414;
-    --secondary-color: #2a292e;
-    --accent-color: #ffffff;
-    --secondary-accent-color: rgba(200, 170, 100);
-    /* Gold */
-    --background-color: #ffffff;
-    --text-color: #ffffff;
-    /* White text */
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    letter-spacing: 0.1rem;
+    color: var(--accent-color)
 }
 
 /* Navigation */
@@ -77,6 +91,10 @@ nav {
 
 #selected-project {
     background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
 }
 
 .selected-project-image-container {
@@ -94,8 +112,8 @@ nav {
 }
 
 .project-container {
+    width: 100%;
     justify-content: space-evenly;
-    max-width: 90%;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -107,6 +125,7 @@ nav {
 }
 
 .project-item {
+    min-width: 250px;
     width: 550px;
     max-width: 100%;
 }
@@ -117,6 +136,45 @@ nav {
 
 .project-item p {
     margin-bottom: 2rem;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+}
+
+.reference p {
+    font-size: 1rem;
+    color: var(--accent-color);
+}
+
+.reference h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.job-types {
+    margin: auto;
+    max-width: 100%;
+}
+
+.job-types ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.job-types li {
+    list-style: none;
+    margin: 1rem;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    z-index: 1;
+}
+
+.job-types li:first-child {
+    list-style: none;
 }
 
 @media (max-width: 900px) {
@@ -125,7 +183,6 @@ nav {
         font-size: 30px;
         text-transform: uppercase;
         font-weight: 200;
-        font-family: "Montserrat", sans-serif;
     }
 
     nav ul li a {
@@ -165,6 +222,14 @@ nav ul {
 
 nav ul li {
     margin: 0 20px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+/* Hover Effects */
+nav ul li:hover {
+    background-color: var(--grey);
+    transition: 0.75s ease;
 }
 
 
@@ -178,13 +243,12 @@ nav ul li {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     text-align: center;
     position: relative;
 }
 
 .hero div {
-    padding-top: 5rem;
+    /* padding-top: 1rem; */
 }
 
 /* Opaque Overlay */
@@ -210,9 +274,9 @@ nav ul li {
 
 .hero h2 {
     font-size: 3.5rem;
-    font-family: "Montserrat", sans-serif;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 }
 
 .hero p {
@@ -221,34 +285,12 @@ nav ul li {
     width: 60%;
 }
 
-/* Call to Action Button */
-.hero a,
-.hero a:visited {
-    background-color: var(--secondary-accent-color);
-    color: var(--main-color);
-    display: inline-block;
-    margin-top: 50px;
-    padding: 12px 24px;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
-}
-
 h1 {
     position: relative;
     z-index: 1;
     margin: 0;
 }
 
-
-.p {
-    font-size: 18px;
-    color: #ddd;
-    max-width: 800px;
-    margin: 0 auto;
-}
 
 .about {
     background-image: url('assets/outdoor.png');
@@ -281,7 +323,7 @@ section {
     padding: 4rem 2rem;
     text-align: center;
     position: relative;
-    min-height: 90vh;
+    min-height: 30vh;
 }
 
 .brighter-section a {
@@ -301,17 +343,7 @@ footer p {
     margin: 0;
 }
 
-/* Hover Effects */
-nav ul li a:hover,
-.hero a:hover,
-.contact form button:hover {
-    background-color: transparent;
-    color: var(--secondary-accent-color);
-    transition: 0.5s ease;
-}
-
 p.hero-text {
-    color: white;
     text-align: center;
     margin: auto;
     min-width: 350px;
