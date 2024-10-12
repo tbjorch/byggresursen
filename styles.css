@@ -365,7 +365,7 @@ p.hero-text {
     background-clip: text;
     color: transparent;
     -webkit-background-clip: text;
-    animation: light-passing 2.5s ease-out forwards;
+    animation: light-passing 1.5s ease-out forwards;
 }
 
 @keyframes light-passing {
