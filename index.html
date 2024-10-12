@@ -106,24 +106,27 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Byggreursen AB</p>
+        <p>&copy; 2024 Byggreursen Sverige AB</p>
     </footer>
 
     <script>
         // Smooth scroll function
         function smoothScroll(target) {
             const element = document.querySelector(target);
+            let elementPosition = element.getBoundingClientRect().top;
+            if (target === '#references') {
+                elementPosition = elementPosition - 40;
+            }
+            const offsetPosition = elementPosition + window.scrollY;
             window.scrollTo({
-                top: element.offsetTop,
+                top: offsetPosition,
                 behavior: 'smooth'
             });
         }
 
         // Add event listeners to navigation links
         const navLinks = document.querySelectorAll('nav ul li a');
-        const heroCta = document.querySelectorAll('.hero div a');
-        const links = [...navLinks, ...heroCta];
-        links.forEach(link => {
+        navLinks.forEach(link => {
             link.addEventListener('click', (event) => {
                 event.preventDefault();
                 const target = link.getAttribute('href');
