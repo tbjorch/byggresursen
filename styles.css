@@ -4,16 +4,22 @@ html {
     padding: 0;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 200;
+    font-weight: 400;
     font-style: normal;
     background-color: #f4f4f4;
     color: var(--accent-color);
 }
 
-
-@media (max-width: 600px) {
+@media (max-width: 400px) {
     html {
         font-size: 12px;
+    }
+}
+
+
+@media (min-width: 401px) and (max-width: 600px) {
+    html {
+        font-size: 14px;
     }
 }
 
@@ -26,7 +32,7 @@ html {
 /* Luxurious Color Palette */
 :root {
     --main-color: #141414;
-    --secondary-color: #2a292e;
+    --secondary-color: #1c1b1e;
     --accent-color: #ffffffea;
     --grey: #f4f4f418;
     --secondary-accent-color: rgba(200, 170, 100);
@@ -49,7 +55,6 @@ h2 {
     font-size: 2rem;
     font-weight: 300;
     color: var(--accent-color);
-    text-transform: uppercase;
 }
 
 p {
@@ -89,7 +94,7 @@ nav {
     max-width: 90%;
 }
 
-#selected-project {
+.selected-project {
     background-color: var(--main-color);
     display: flex;
     justify-content: center;
@@ -124,10 +129,23 @@ nav {
     margin-bottom: 1.5rem;
 }
 
-.project-item {
+/* .project-item {
     min-width: 250px;
     width: 550px;
     max-width: 100%;
+} */
+
+@media (min-width: 1250px) {
+    .project-item {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 1249px) {
+    .project-item {
+        min-width: 80%;
+        max-width: 90%;
+    }
 }
 
 .project-item h1 {
@@ -177,39 +195,12 @@ nav {
     list-style: none;
 }
 
-@media (max-width: 900px) {
-    nav h1 {
-        color: var(--text-color);
-        font-size: 30px;
-        text-transform: uppercase;
-        font-weight: 200;
-    }
-
-    nav ul li a {
-        color: var(--text-color);
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 300;
-        text-transform: uppercase;
-    }
-}
-
-@media (min-width: 901px) {
-    nav h1 {
-        color: var(--text-color);
-        font-size: 30px;
-        text-transform: uppercase;
-        font-weight: 200;
-        font-family: "Montserrat", sans-serif;
-    }
-
-    nav ul li a {
-        color: var(--text-color);
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: 300;
-        text-transform: uppercase;
-    }
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
 nav ul {
@@ -224,6 +215,7 @@ nav ul li {
     margin: 0 20px;
     border-radius: 0.5rem;
     padding: 0.5rem;
+    font-size: 1rem;
 }
 
 /* Hover Effects */
@@ -275,8 +267,9 @@ nav ul li:hover {
 .hero h2 {
     font-size: 3.5rem;
     letter-spacing: 0.2rem;
+    font-weight: 300;
     text-transform: uppercase;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
 }
 
 .hero p {
@@ -318,22 +311,23 @@ section {
     min-height: 90vh;
 }
 
+#our-services .project-item:nth-child(2) h2 {
+    margin-top: 0;
+}
+
+#references {
+    margin-top: 3rem;
+}
+
 .brighter-section {
     background-color: var(--secondary-color);
     padding: 4rem 2rem;
-    text-align: center;
     position: relative;
-    min-height: 30vh;
-}
-
-.brighter-section a {
-    color: white;
-    text-decoration: none;
 }
 
 /* Footer */
 footer {
-    background-color: var(--main-color);
+    background-color: var(--secondary-color);
     color: white;
     padding: 20px;
     text-align: center;
@@ -347,4 +341,39 @@ p.hero-text {
     text-align: center;
     margin: auto;
     min-width: 350px;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    min-height: 20vh;
+    text-align: center;
+}
+
+#contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.metallic-text {
+    /* Base metallic color */
+    background: linear-gradient(120deg, white, #a4ae72, white);
+    background-size: 170%;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: light-passing 2.5s ease-out forwards;
+}
+
+@keyframes light-passing {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
