@@ -12,7 +12,7 @@ html {
 
 @media (max-width: 400px) {
     html {
-        font-size: 12px;
+        font-size: 12.5px;
     }
 }
 
@@ -99,7 +99,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.8rem;
 }
 
 .selected-project-image-container {
@@ -154,7 +153,6 @@ nav {
 
 .project-item p {
     margin-bottom: 2rem;
-    font-size: 1rem;
     letter-spacing: 0.15rem;
 }
 
@@ -270,12 +268,6 @@ nav ul li:hover {
     font-weight: 300;
     text-transform: uppercase;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
-}
-
-.hero p {
-    font-size: 16px;
-    margin-top: 20px;
-    width: 60%;
 }
 
 h1 {
