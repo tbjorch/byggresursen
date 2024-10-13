@@ -55,6 +55,7 @@ h2 {
     font-size: 2rem;
     font-weight: 300;
     color: var(--accent-color);
+    text-transform: uppercase;
 }
 
 p {
@@ -309,6 +310,10 @@ section {
 
 #references {
     margin-top: 3rem;
+}
+
+.reference h4 {
+    text-transform: uppercase;
 }
 
 .brighter-section {
