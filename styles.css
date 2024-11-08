@@ -355,6 +355,16 @@ p.hero-text {
     text-decoration: none;
 }
 
+.uc-logo {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.uc-logo img {
+    width: 300px;
+    margin: 0 auto;
+}
+
 .metallic-text {
     /* Base metallic color */
     background: linear-gradient(120deg, white, #a4ae72, white);
